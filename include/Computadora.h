@@ -1,6 +1,7 @@
 #ifndef COMPUTADORA_H
 #define COMPUTADORA_H
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -22,5 +23,31 @@ void setMemoria_Ram(const string &l);
 string getMemoria_Ram();
 void setModelo(const string &l);
 string getModelo();
+
+friend ostream& operator<<(ostream &out, Computadora &c)
+{
+    out<<left;
+    out<<setw(30)<<c.Nombre_Equipo;
+    out<<setw(17)<<c.Modelo;
+    out<<setw(22)<<c.Sistema_Operativo;
+    out<<setw(16)<<c.Memoria_Ram;
+    out<<endl;
+
+    return out;
+}
+friend istream& operator>>(istream &in, Computadora &c)
+{
+    cout<< "Nombre: ";
+    getline(cin,c.Nombre_Equipo);
+    cout<< "Modelo: ";
+    getline(cin,c.Modelo);
+    cout<< "Sistema Op: ";
+    getline(cin,c.Sistema_Operativo);
+    cout<< "Memoria RAM: ";
+    getline(cin,c.Memoria_Ram);
+
+
+    return in;
+}
 };
 #endif // COMPUTADORA_H

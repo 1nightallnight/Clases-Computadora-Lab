@@ -52,4 +52,3 @@ string Computadora::getSistema_Operativo()
 {
     return Sistema_Operativo;
 }
-

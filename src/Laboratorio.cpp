@@ -1,5 +1,6 @@
 #include "Laboratorio.h"
 #include <iomanip>
+#include <fstream>
 
 Laboratorio::Laboratorio()
 {
@@ -39,3 +40,73 @@ void Laboratorio::Mostrar()
 */
 
 }
+
+void Laboratorio::Respaldar_Tabla()
+{
+    ofstream archivo("ComputadorasTABLA.txt");
+    if(archivo.is_open())
+    {
+         archivo<<endl;
+         archivo<<left;
+         archivo<<setw(30)<<"Nombre";
+         archivo<<setw(17)<<"Modelo";
+         archivo<<setw(22)<<"Sistema Op";
+         archivo<<setw(16)<<"Memoria RAM";
+         archivo<<endl;
+        for(size_t i=0;i<cont;i++)
+       {
+           Computadora &c=arreglo[i];
+           archivo<<c;
+       }
+    }
+    archivo.close();
+}
+
+void Laboratorio::Respaldar()
+{
+    ofstream archivo("Computadoras.txt");
+    if(archivo.is_open())
+    {
+        for(size_t i=0;i<cont;i++)
+       {
+           Computadora &c=arreglo[i];
+           archivo<<c.getNombre_Equipo()<<endl;
+           archivo<<c.getModelo()<<endl;
+           archivo<<c.getSistema_Operativo()<<endl;
+           archivo<<c.getMemoria_Ram()<<endl;
+
+       }
+    }
+    archivo.close();
+}
+
+void Laboratorio::Recuperar()
+{
+    ifstream archivo("Computadoras.txt");
+    if(archivo.is_open())
+    {
+        string temp;
+        Computadora c;
+
+        while(true)
+        {
+            getline(archivo, temp); //leer nombre del equipo
+            if(archivo.eof())
+               {
+                   break;
+
+               }
+            c.setNombre_Equipo(temp);
+            getline(archivo, temp); //leer modelo
+            c.setModelo(temp);
+            getline(archivo, temp); //leer Sistema
+            c.setSistema_Operativo(temp);
+            getline(archivo, temp); //leer memoria
+            c.setMemoria_Ram(temp);
+
+            Agregarfinal(c);
+        }
+    }
+    archivo.close();
+}
+

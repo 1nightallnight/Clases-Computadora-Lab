@@ -6,7 +6,10 @@ using namespace std;
 
 int main()
 {
-    Computadora c01;
+    Laboratorio la;
+    la.Recuperar();
+    la.Mostrar();
+  /*Computadora c01;
     c01.setNombre_Equipo("DELL L A T I T U D E E5410");
     c01.setModelo("5400");
     c01.setSistema_Operativo("Windows 10");
@@ -22,6 +25,8 @@ int main()
     lab<<c01<<c02<<c04;
 
     lab.Mostrar();
+    lab.Respaldar_Tabla();
+    lab.Respaldar();*/
 
     return 0;
 }

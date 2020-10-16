@@ -1,0 +1,5 @@
+
+Nombre                        Modelo           Sistema Op            Memoria RAM     
+DELL L A T I T U D E E5410    5400             Windows 10            6144MB RAM      
+Acer Aspire                   NX.M0RAL.016     WINDOWS 7 STARTER     2 GB            
+Laptop HP Pavilion Gaming     162D3LA#ABM      WINDOWS 10 HOME       265 GB SSD      

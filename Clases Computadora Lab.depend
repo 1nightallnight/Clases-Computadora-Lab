@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1602819342 source:c:\users\giovann\desktop\boites\clases-computadora-lab\main.cpp
+1602825035 source:c:\users\giovann\desktop\boites\clases-computadora-lab\main.cpp
 	<iostream>
 	"Laboratorio.h"
 
-1602819342 c:\users\giovann\desktop\boites\clases-computadora-lab\include\laboratorio.h
+1602824884 c:\users\giovann\desktop\boites\clases-computadora-lab\include\laboratorio.h
 	"Computadora.h"
 
 1602819342 c:\users\giovann\desktop\boites\clases-computadora-lab\include\computadora.h
@@ -13,7 +13,8 @@
 1602819342 source:c:\users\giovann\desktop\boites\clases-computadora-lab\src\computadora.cpp
 	"Computadora.h"
 
-1602819342 source:c:\users\giovann\desktop\boites\clases-computadora-lab\src\laboratorio.cpp
+1602825463 source:c:\users\giovann\desktop\boites\clases-computadora-lab\src\laboratorio.cpp
 	"Laboratorio.h"
 	<iomanip>
+	<fstream>
 
